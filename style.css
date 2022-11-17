@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    height: 100%;
+}
+
+body{
+    font-family: cursive;
+    font-size: 1.2rem;
+    min-height: 100%;
+    
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+
+}
+.header {
+    grid-area: header;
+    background-image: url('./helados-de-coco_3.jpg');
+    background-color: rgba(94, 20, 94, 0.959);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3rem;
+    color: rgb(237, 231, 243);
+    text-shadow: 1px 1px rgb(245, 31, 31);
+}
+h2{
+    font-size: 3rem;
+    color: fuchsia;
+    text-shadow: 1px 1px black;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: blueviolet;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100%;
+}
+.imgnav{
+    width: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.imgnav:hover{
+    box-shadow: -1px 1px 7px 0px rgb(39, 177, 211);
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: fuchsia;
+    
+}
+.imgredes{
+    width:150px ;
+} 
+.main {
+    text-shadow: blueviolet;
+    grid-area: main;
+    background-color: blueviolet;
+    height: 100%;
+}
+.main1{
+    text-shadow: 1px 1px mediumvioletred;
+    background-color: blueviolet;
+}
+.tr2{
+    text-align: center;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 0%;
+    background-color: rgb(39, 177, 211);
+}
+.tr3{
+    text-align: center;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: aqua;
+}
+.tr4{
+    text-align: center;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(43, 205, 226);
+}
+.hfrut{
+    width: 200px;
+}
+.imgtienda{
+    width:  100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.tienda1{
+    height: 120px;
+}
+.tienda2{
+    height: 120px;
+}
+.tienda3{
+    height: 120px;
+}
+.tienda4{
+    height: 120px;
+}
+.tienda5{
+   height: 120px; 
+}
+.tienda6{
+    height: 120px;
+}
+.tienda7{
+   height: 120px; 
+}
+.tienda8{
+  height: 120px;  
+}
+.tienda9{
+    height: 120px;
+}
+.footer{
+    grid-area: footer;
+    font-size:30px ;
+    text-shadow: 1px 1px blueviolet;
+    background-image: url('./images\ \(1\).jpg');
+    background-color: lightgreen;
+}
+img{
+    width: 250px;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap:20px;
+        grid-template:
+        "header header" 280px
+        "navbar navbar"auto
+        "sidebar main" auto
+        "footer footer" 70px/
+        200px auto;
+        overflow-y: scroll;
+    } 
+    h2{
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template:
+        "header header header" 280px
+        "navbar main sidebar" auto
+        "footer footer footer" 90px/
+        150px auto 300px;
+        overflow-y: scroll;
+    }
+    .header {
+        grid-area: header;
+        background-color: fuchsia;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        align-content: space-between;
+        justify-content: center;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+}
+
